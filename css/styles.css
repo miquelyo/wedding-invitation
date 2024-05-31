@@ -1,3 +1,7 @@
+::-webkit-scrollbar {
+    display: none; /* Menyembunyikan bilah gulir */
+}
+
 body, html {
     margin: 0;
     padding: 0;
@@ -5,11 +9,13 @@ body, html {
     height: 100%;
     font-family: 'Arial', sans-serif;
     overflow-x: hidden; /* Prevent horizontal scrolling */
+    scrollbar-width: none;
 }
 
 body {
     background-color: #000; /* Background color set to black */
     position: relative;
+
 }
 
 section {
@@ -59,6 +65,7 @@ body.white-background {
     font-family: 'Sacramento', cursive !important; 
     font-size: 40px;
     margin-bottom: 5px;
+    margin-top: 30px;
 }
 
 .avatar {
@@ -169,7 +176,6 @@ body.white-background {
 }
 
 /* Bottom navigation */
-/* Bottom navigation */
 .bottom-navigation {
     position: fixed;
     bottom: 0;
@@ -203,14 +209,13 @@ body.white-background {
     color: #000; /* Text color set to black */
     text-decoration: none;
     font-size: 14px;
-    font-weight: bold; /* Make the text bold */
     display: flex;
     flex-direction: column; /* Ensure text is below the icon */
     align-items: center;
 }
 
 .bottom-navigation ul li i {
-    font-size: 20px;
+    font-size: 18px;
     margin-bottom: 5px; /* Space between icon and text */
 }
 
@@ -235,3 +240,53 @@ body.white-background {
     font-size: 20px;
     color: #ec0000;
 }
+
+
+.hidden {
+    display: none;
+}
+
+.fade {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.fade.show {
+    opacity: 1;
+}
+
+.white-background {
+    background-color: white;
+}
+
+
+.countdown-container {
+    background-color: #f8f9fa; /* Warna latar belakang */
+    border: 1px solid #ced4da; /* Warna border */
+    border-radius: 50px; /* Membuat border menjadi bulat */
+    padding: 10px 20px; /* Padding untuk memberi ruang di dalam border */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Bayangan (shadow) pada border */
+}
+
+.countdown {
+    font-size: 20px; /* Ukuran font countdown */
+    text-align: center; /* Posisi teks di tengah */
+    margin: 0; /* Menghapus margin default */
+}
+
+.countdown-container span {
+    margin: 0 10px; /* Memberikan ruang di antara teks countdown */
+}
+
+.card {
+    border: 2px solid rgba(0, 0, 0, 0.125); /* Tambahkan border */
+    box-shadow: 0 1rem 1rem rgba(0, 0, 0, 1.0); /* Tambahkan shadow */
+    margin-top: 20px; /* Jarak atas */
+    margin-bottom: 20px; /* Jarak bawah */
+    border-radius: 20px; /* Tambahkan border-radius */
+}
+
+.carousel-inner {
+    border-radius: 20px; /* Tambahkan border-radius */
+}
+

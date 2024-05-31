@@ -17,8 +17,11 @@ function toggleSection(sectionId) {
     const section = document.getElementById(sectionId);
     if (section.style.display === 'none' || section.style.display === '') {
         section.style.display = 'block';
+        section.classList.add('show');
+        AOS.refresh(); // Refresh AOS to apply animations to newly displayed sections
     } else {
         section.style.display = 'none';
+        section.classList.remove('show');
     }
 }
 
@@ -60,4 +63,29 @@ function openInvitation() {
     
     button.setAttribute('onclick', '');
 }
+
+// Mendapatkan elemen countdown
+const countdownElement = document.getElementById('countdown');
+
+// Hitung mundur waktu ke tanggal acara
+const countdownDate = new Date('July 14, 2024 00:00:00').getTime();
+
+const updateCountdown = () => {
+    const now = new Date().getTime();
+    const distance = countdownDate - now;
+
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    countdownElement.innerHTML = `${days} Hari ${hours} Jam ${minutes} Menit ${seconds} Detik`;
+
+    if (distance < 0) {
+        countdownElement.innerHTML = 'Acara Telah Dimulai!';
+    }
+};
+
+// Memperbarui countdown setiap detik
+setInterval(updateCountdown, 1000);
 
