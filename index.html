@@ -3,60 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Undangan Pernikahan Yoga & Septi</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    
+    <title>Wedding Invitation</title>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <div class="home-section"> <!-- Mengganti nama hero-section menjadi home -->
-        <div class="overlay">
-            <h1>Yoga & Septi</h1>
-            <div class="countdown-container">
-                <div class="countdown-item">
-                    <span id="days">00</span>
-                    <p>Hari</p>
+    <div class="overlay"></div>
+    <div class="container">
+        <section class="home" id="home">
+            <div class="content">
+                <h2 class="event-title">The Wedding Of</h2>
+                <div class="avatar">
+                    <img src="../assets/images/coupleavatar.jpg" alt="Avatar" class="avatar-img">
                 </div>
-                <div class="countdown-item">
-                    <span id="hours">00</span>
-                    <p>Jam</p>
-                </div>
-                <div class="countdown-item">
-                    <span id="minutes">00</span>
-                    <p>Menit</p>
-                </div>
-                <div class="countdown-item">
-                    <span id="seconds">00</span>
-                    <p>Detik</p>
-                </div>
+                <h1 class="couple-names">Yoga & Septi</h1>
+                <h4 style="font-size: 20px;">Kepada Yth Bpk/Ibu/Saudara/i</h4>
+                <h2>Teman Teman Semua</h2>
+                <button class="btn btn-light rounded-pill btn-lg mt-3" onclick="openInvitation()">Open Invitation</button>
             </div>
-            <p></p>
-            <div class="button-wrapper">
-                <button class="confetti-button" onclick="showInvitation()">Buka Undangan</button> <!-- Mengubah Open Invitation menjadi Buka Undangan -->
-              </div>
-        </div>
+        </section>
     </div>
-
-    <div class="invitation-section" id="invitation" style="display: none;">
-        <h2 class="animated bling-bling">Selamat Datang</h2>
-        <p class="animated">Kepada Para Tamu yang Terhormat,</p>
-        <p class="animated">Kami dengan senang hati mengundang Anda untuk berbagi kebahagiaan kami pada acara pernikahan yang akan diselenggarakan pada:</p>
-        <p class="animated"><strong>14 Juli 2024</strong></p>
-        <p class="animated">Lokasi: Gedung Serbaguna</p>
-    </div>
-
-    <div class="wedding-info-section" id="wedding-info" style="display: none;">
-        <h2 class="animated" style="text-align: center;">Info Pernikahan</h2>
-        <div class="card animated">
-            <img src="images/kawin.jpg" class="card-img-top" alt="Foto Pernikahan Yudha & Ria">
-            <div class="card-body">
-                <h5 class="card-title">Yoga & Septi</h5>
-                <p class="card-text">Kami bersiap untuk mengikat janji suci pernikahan, dan kami sangat mengharapkan kehadiran Anda untuk berbagi momen bersejarah ini bersama kami.</p>
-            </div>
-        </div>
-    </div>
-
-    <script src="script.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
