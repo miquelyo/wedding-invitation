@@ -10,9 +10,13 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: url('../assets/images/bg.jpg') no-repeat center center;
-    background-size: cover; /* Ensure the background image covers the entire area */
+    background-color: #000; /* Background color set to black */
     position: relative;
+}
+
+body.white-background {
+    background-color: #fff; /* White background for the second state */
+    color: #000; /* Black text for the second state */
 }
 
 .overlay {
@@ -22,6 +26,10 @@ body {
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.5); /* Semi-transparent background for readability */
+}
+
+.overlay.hidden {
+    display: none; /* Hide the overlay in the second state */
 }
 
 .container {
@@ -40,10 +48,14 @@ body {
     padding: 20px;
 }
 
+.home.white-background {
+    color: black; /* Black text for the second state */
+}
+
 .event-title {
     font-family: 'Great Vibes', cursive;
-    font-size: 3em;
-    margin-bottom: 50px;
+    font-size: 30px;
+    margin-bottom: 5px;
 }
 
 .avatar {
@@ -51,8 +63,8 @@ body {
 }
 
 .avatar-img {
-    width: 150px;
-    height: 150px;
+    width: 200px;
+    height: 200px;
     border-radius: 50%;
     border: 5px solid white;
     margin-bottom: 20px;
@@ -152,4 +164,54 @@ body {
         font-size: 0.9em;
         padding: 8px 16px;
     }
+}
+
+
+/* Bottom navigation */
+.bottom-navigation {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    padding: 10px 0;
+}
+
+.bottom-navigation ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.bottom-navigation ul li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.bottom-navigation ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+/* Tombol suara */
+.sound-control {
+    position: fixed;
+    bottom: 70px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.sound-control button {
+    width: 40px;
+    height: 40px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.sound-control button i {
+    font-size: 20px;
+    color: #ec0000;
 }
