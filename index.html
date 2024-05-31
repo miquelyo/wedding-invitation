@@ -3,11 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wedding Invitation</title>
+    <title>The Wedding Of Yoga & Tila</title>
+    <meta name="description" content="The Wedding of Yoga & Tila. Minggu, 14 Juli 2024">
+    <!-- Penambahan meta tag untuk mengidentifikasi gambar yang akan muncul saat tautan dibagikan di media sosial -->
+    <meta property="og:image" content="images/coupleavatar.jpg">
+    <!-- Penambahan meta tag untuk judul dan deskripsi saat tautan dibagikan di media sosial -->
+    <meta property="og:title" content="The Wedding Of Yoga & Tila">
+    <meta property="og:description" content="The Wedding of Yoga & Tila. Minggu, 14 Juli 2024">
     <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Sacramento' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Josefin+Sans' rel='stylesheet'>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .rotate {
+            animation: rotation 10s infinite linear;
+        }
+
+        @keyframes rotation {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
 </head>
 <body>
     <div class="overlay"></div>
@@ -18,33 +41,93 @@
                 <div class="avatar">
                     <img src="../assets/images/coupleavatar.jpg" alt="Avatar" class="avatar-img">
                 </div>
-                <h1 class="couple-names">Yoga & Septila</h1>
-                <h4 class="invitation-text" style="font-size: 20px;">Kepada Yth Bpk/Ibu/Saudara/i</h4>
-                <h2 class="invitation-text">Teman Teman Semua</h2>
+                <h1 class="couple-names">Yoga & Tila</h1>
+                <h4 class="invitation-text" style="font-size: 15px;">Kepada Yth Bpk/Ibu/Saudara/i</h4>
+                <h2 class="invitation-text" style="font-size: 30px;">Teman Teman Semua</h2>
                 <button class="btn btn-light rounded-pill btn-lg mt-3 open-invitation" onclick="openInvitation()">Open Invitation</button>
             </div>
         </section>
+        <!-- Sections to be toggled -->
+        <section id="mempelai" style="display: none;" data-aos="fade-up">
+            <!-- Content for Mempelai section -->
+            <h2>بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحِيْمِ</h2>
+            <p style="font-family: Sacramento; font-size: 40px; margin-top: 15px;">Assalamualaikum Warahmatullahi Wabarakatuh</p>
+            <!-- Circle Avatar -->
+            <div class="circle-avatar">
+                <img src="assets/images/mcowok.jpg" alt="Avatar" class="avatar-img">
+                <h3>Yoga</h3>
+                <p>Putra Bapak ... & Ibu ...</p>
+            </div>
+        </section>
+        <section id="tanggal" style="display: none;">
+            <!-- Content for Tanggal section -->
+            <h2>Tanggal Section</h2>
+            <p>Content here...</p>
+        </section>
+        <section id="galeri" style="display: none;">
+            <!-- Content for Galeri section -->
+            <h2>Galeri Section</h2>
+            <p>Content here...</p>
+        </section>
+        <section id="ucapan" style="display: none;">
+            <!-- Content for Ucapan section -->
+            <h2>Ucapan Section</h2>
+            <p>Content here...</p>
+        </section>
     </div>
+    
     <!-- Tombol suara -->
-    <div id="sound-control" class="sound-control">
+    <div id="sound-control" class="sound-control" style="display: none;">
         <button id="toggle-sound" class="btn btn-light rounded-circle" onclick="toggleSound()">
-            <i id="sound-icon" class="fas fa-volume-up"></i>
+            <i id="sound-icon" class="fas fa-play"></i> <!-- Ganti dengan kelas FontAwesome untuk ikon play -->
         </button>
     </div>
 
-    <!-- Bottom navigation -->
-    <nav class="bottom-navigation" id="bottom-navigation">
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#mempelai">Mempelai</a></li>
-            <li><a href="#tanggal">Tanggal</a></li>
-            <li><a href="#galeri">Galeri</a></li>
-            <li><a href="#ucapan">Ucapan</a></li>
-        </ul>
-    </nav>
+
+<div id="bottom-navigation" class="bottom-navigation" style="display: none;">
+    <ul>
+        <li>
+            <a href="#home">
+                <i class="fas fa-home"></i>
+                <span>Home</span>
+            </a>
+        </li>
+        <li>
+            <a href="#mempelai">
+                <i class="fas fa-user"></i>
+                <span>Mempelai</span>
+            </a>
+
+        </li>
+        <li>
+            <a href="#tanggal">
+                <i class="fas fa-calendar"></i>
+                <span>Tanggal</span>
+            </a>
+        </li>
+        <li>
+            <a href="#galeri">
+                <i class="fas fa-images"></i>
+                <span>Galeri</span>
+            </a>
+        </li>
+        <li>
+            <a href="#ucapan">
+                <i class="fas fa-comments"></i>
+                <span>Ucapan</span>
+            </a>
+        </li>
+    </ul>
+</div>
+
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="js/script.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 </html>
