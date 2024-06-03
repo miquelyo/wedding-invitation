@@ -1,292 +1,83 @@
+/*CSS UNTUK MENYEMBUNYIKAN GULIR BILAH*/
 ::-webkit-scrollbar {
     display: none; /* Menyembunyikan bilah gulir */
 }
 
+.font-normal {
+    font-family: 'Josefin Sans', sans-serif !important;
+}
+
+.font-aesthetic {
+    font-family: 'Sacramento', cursive !important;
+}
+
+.font-arabic {
+    font-family: 'Noto Naskh Arabic', serif !important;
+}
+
 body, html {
+    height: 100%;
     margin: 0;
-    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000;
+    font-family: Arial, sans-serif;
+}
+#loader {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#progress-container {
     width: 100%;
-    height: 100%;
-    font-family: 'Arial', sans-serif;
-    overflow-x: hidden; /* Prevent horizontal scrolling */
-    scrollbar-width: none;
-}
-
-body {
-    background-color: #000; /* Background color set to black */
-    position: relative;
-
-}
-
-section {
-    width: 100%;
-    max-width: 800px; /* Sesuaikan dengan lebar maksimum yang diinginkan */
-    margin: 0 auto;
-    padding: 20px;
-}
-
-body.white-background {
-    background-color: #fff; /* White background for the second state */
-    color: #000; /* Black text for the second state */
-}
-
-.overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background for readability */
-}
-
-.overlay.hidden {
-    display: none; /* Hide the overlay in the second state */
-}
-
-.container {
-    width: 100%;
-    text-align: center;
-    position: relative; /* Ensure the content is above the overlay */
-    z-index: 1; /* Ensure the content is above the overlay */
-    padding: 20px;
-}
-
-.home {
-    font-family: josefin sans, sans-serif !important; 
-    font-size: 1.5em;
-    color: white;
-}
-
-.home.white-background {
-    color: black; /* Black text for the second state */
-}
-
-.event-title {
-    font-family: 'Sacramento', cursive !important; 
-    font-size: 40px;
-    margin-bottom: 5px;
-    margin-top: 30px;
-}
-
-.avatar {
-    margin: 20px 0;
-}
-
-.avatar-img {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    border: 5px solid white;
+    margin-top: 10px;
+    max-width: 500px;
+    background: #e0e0e0;
+    border-radius: 20px;
+    overflow: hidden;
     margin-bottom: 20px;
 }
 
-.couple-names {
-    font-family: 'Sacramento', cursive !important; /* Menggunakan font Sacramento */
-    font-size: 40px;
-    margin: 20px 0;
-}
-
-.countdown {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    margin: 20px 0;
-}
-
-.time-box {
-    text-align: center;
-}
-
-.time {
-    display: block;
-    font-size: 2em;
-}
-
-.label {
-    font-size: 1em;
-}
-
-.open-invitation {
-    font-size: 20px;
-    font-weight: bold;
-    color: #000;
-    background-color: #fff;
-    border: none;
-    cursor: pointer;
-}
-
-.open-invitation:hover {
-    background-color: #f0f0f0;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .event-title {
-        font-size: 1.5em;
-    }
-
-    .avatar-img {
-        width: 120px;
-        height: 120px;
-    }
-
-    .couple-names {
-        font-size: 3em;
-    }
-
-    .time {
-        font-size: 1.5em;
-    }
-
-    .label {
-        font-size: 0.9em;
-    }
-
-    .open-invitation {
-        font-size: 1em;
-    }
-}
-
-@media (max-width: 480px) {
-    .event-title {
-        font-size: 1.2em;
-    }
-
-    .avatar-img {
-        width: 100px;
-        height: 100px;
-    }
-
-    .couple-names {
-        font-size: 2.5em;
-    }
-
-    .time {
-        font-size: 1.2em;
-    }
-
-    .label {
-        font-size: 0.8em;
-    }
-
-    .open-invitation {
-        font-size: 0.9em;
-        padding: 8px 16px;
-    }
-}
-
-/* Bottom navigation */
-.bottom-navigation {
-    position: fixed;
-    bottom: 0;
-    left: 0;
+#progress-bar {
+    height: 30px;
     width: 100%;
-    background-color: #fff; /* Background color set to white */
-    padding: 10px 0;
-    box-shadow: 0 -2px 5px rgba(0,0,0,0.1); /* Optional: Add shadow for better visibility */
-    z-index: 1000;
+    background-color: #76c7c0;
+    border-radius: 10px;
+    transition: width 0.1s;
+   
 }
-
-.bottom-navigation ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    text-align: center;
-}
-
-.bottom-navigation ul li {
-    flex: 1;
-    display: flex;
-    flex-direction: column; /* Align items vertically */
-    align-items: center;
-    margin: 0 10px;
-}
-
-.bottom-navigation ul li a {
-    color: #000; /* Text color set to black */
-    text-decoration: none;
-    font-size: 14px;
-    display: flex;
-    flex-direction: column; /* Ensure text is below the icon */
-    align-items: center;
-}
-
-.bottom-navigation ul li i {
-    font-size: 18px;
-    margin-bottom: 5px; /* Space between icon and text */
-}
-
-
-/* Tombol suara */
-.sound-control {
-    position: fixed;
-    bottom: 70px;
-    right: 20px;
-    z-index: 1000;
-}
-
-.sound-control button {
-    width: 40px;
-    height: 40px;
-    border: none;
-    background-color: transparent;
-    cursor: pointer;
-}
-
-.sound-control button i {
-    font-size: 20px;
-    color: #ec0000;
-}
-
-
-.hidden {
+#home {
     display: none;
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
 }
 
-.fade {
-    opacity: 0;
-    transition: opacity 0.5s ease-in-out;
+.avatar img {
+    border-radius: 50%;
+    width: 225px; /* Sesuaikan dengan ukuran yang diinginkan */
+    height: 225px; /* Sesuaikan dengan ukuran yang diinginkan */
+    border: 3px solid white; /* Menambahkan border hitam dengan ketebalan 5px */
 }
 
-.fade.show {
-    opacity: 1;
+.rounded-pill {
+    border-radius: 50px; /* Membuat sudut tombol menjadi bulat */
+    padding: 10px 20px; /* Menambahkan padding pada tombol */
+    border: none; /* Menghilangkan border default tombol */
+    background-color: white; /* Mengatur warna latar belakang tombol */
+    color: black; /* Mengatur warna teks tombol */
+    font-size: 16px; /* Mengatur ukuran font tombol */
+    cursor: pointer; /* Mengubah kursor menjadi pointer saat diarahkan ke tombol */
+    transition: background-color 0.3s, transform 0.3s; /* Menambahkan efek transisi pada latar belakang dan transformasi */
 }
 
-.white-background {
-    background-color: white;
+.rounded-pill:hover {
+    background-color: #d1d1d1; /* Mengubah warna latar belakang saat tombol di-hover */
+    transform: scale(1.05); /* Memperbesar tombol sedikit saat di-hover */
 }
 
 
-.countdown-container {
-    background-color: #f8f9fa; /* Warna latar belakang */
-    border: 1px solid #ced4da; /* Warna border */
-    border-radius: 50px; /* Membuat border menjadi bulat */
-    padding: 10px 20px; /* Padding untuk memberi ruang di dalam border */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Bayangan (shadow) pada border */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
-
-.countdown {
-    font-size: 20px; /* Ukuran font countdown */
-    text-align: center; /* Posisi teks di tengah */
-    margin: 0; /* Menghapus margin default */
-}
-
-.countdown-container span {
-    margin: 0 10px; /* Memberikan ruang di antara teks countdown */
-}
-
-.card {
-    border: 2px solid rgba(0, 0, 0, 0.125); /* Tambahkan border */
-    box-shadow: 0 1rem 1rem rgba(0, 0, 0, 1.0); /* Tambahkan shadow */
-    margin-top: 20px; /* Jarak atas */
-    margin-bottom: 20px; /* Jarak bawah */
-    border-radius: 20px; /* Tambahkan border-radius */
-}
-
-.carousel-inner {
-    border-radius: 20px; /* Tambahkan border-radius */
-}
-
