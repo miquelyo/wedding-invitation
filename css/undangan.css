@@ -63,3 +63,60 @@ body, html {
 .card {
     box-shadow: 0px 0px 10px 0px rgba(0,0,1,1.5);
 }
+
+/* CSS LOVE GIFT*/
+
+.love-gift .card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 10px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.love-gift .card-img {
+    max-width: 250px; /* Adjusted size */
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 10px; /* Added margin bottom */
+    align-items: center;
+    text-align: center;
+}
+
+.love-gift .card-text {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+.love-gift .card-number {
+    font-size: 1em;
+    margin: 10px 0;
+}
+
+.love-gift .copy-btn {
+    padding: 5px 10px; /* Adjusted padding */
+    font-size: 0.9em; /* Adjusted font size */
+    color: #fff;
+    background-color: #0066ff;
+    border: none;
+    border-radius: 20px; /* Rounded pill shape */
+    cursor: pointer;
+}
+
+.love-gift .copy-btn:hover {
+    background-color: #0066ff;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.col {
+    flex: 1;
+    max-width: 300px;
+    margin: 10px;
+}
