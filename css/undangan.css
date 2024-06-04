@@ -3,6 +3,7 @@
     display: none; /* Menyembunyikan bilah gulir */
 }
 
+
 .font-normal {
     font-family: 'Josefin Sans', sans-serif !important;
 }
@@ -16,6 +17,7 @@
 }
 
 body, html {
+    scroll-behavior: smooth;
     min-height: 100%;
     margin: 0;
     display: flex;
@@ -103,10 +105,11 @@ body, html {
     border: none;
     border-radius: 20px; /* Rounded pill shape */
     cursor: pointer;
+
 }
 
 .love-gift .copy-btn:hover {
-    background-color: #0066ff;
+    background-color: #0066ffbb;
 }
 
 .row {
@@ -120,3 +123,60 @@ body, html {
     max-width: 300px;
     margin: 10px;
 }
+
+/* CSS BOTTOM NAVIGATION*/
+
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: white;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-around;
+    
+}
+.bottom-nav a {
+    flex-grow: 1;
+    text-align: center;
+    padding: 10px 0;
+    color: rgb(94, 94, 94);
+    text-decoration: none;
+}
+.bottom-nav a:hover {
+    color: #222222;
+}
+
+
+ /* CSS for Play Music Button */
+ #playMusicBtn {
+    position: fixed;
+    bottom: 60px; /* Adjust as needed */
+    right: 20px; /* Adjust as needed */
+    z-index: 9999;
+    background-color: rgba(255, 255, 255, 0.8);
+    width: 30px; /* Adjust as needed */
+    height: 30px; /* Adjust as needed */
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Animation for rotating icon */
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.rotate {
+    animation: rotate 2s linear infinite;
+}
+
+/* MOUSE SCROLL*/

@@ -103,3 +103,44 @@ function deleteUcapan(index) {
     localStorage.setItem('ucapanList', JSON.stringify(ucapanList));
     loadUcapan();
 }
+
+/* SCRIPT MUSIC*/
+window.onload = function() {
+    var bgMusic = document.getElementById('bgMusic');
+    var musicIcon = document.getElementById('musicIcon');
+
+    // Function to start rotating the icon
+    function startRotation() {
+        musicIcon.classList.add('rotate');
+    }
+
+    // Play or pause music on button click
+    document.getElementById('playMusicBtn').addEventListener('click', function() {
+        if (bgMusic.paused) {
+            bgMusic.play();
+            musicIcon.classList.remove('fa-circle-play');
+            musicIcon.classList.add('fa-circle-pause');
+            startRotation(); // Start rotating when music starts
+        } else {
+            bgMusic.pause();
+            musicIcon.classList.remove('fa-circle-pause');
+            musicIcon.classList.add('fa-circle-play');
+            musicIcon.classList.remove('rotate'); // Stop rotating when paused
+        }
+    });
+
+    // Start rotating the icon on page load if music is playing
+    if (!bgMusic.paused) {
+        startRotation();
+    }
+};
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});

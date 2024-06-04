@@ -38,6 +38,8 @@
             </div>
         </section>
 
+        
+
         <!-- Mempelai -->
         <section id="mempelai" class="mempelai py-5">
             <div class="container text-center">
@@ -78,12 +80,26 @@
             <div class="container text-center">
                 <h2 class="font-aesthetic" style="font-size: 36px; color: black; margin-bottom: 20px;">Waktu Menuju Acara</h2>
                 <!-- Countdown Timer -->
-                <div id="countdown" class="rounded-pill font-normal shadow-lg p-3 mb-5 bg-white rounded" style="color: black; border: 1px solid rgb(218, 218, 218);">
-                    <span id="days" style="font-weight: bold; font-size: 30px;"></span> Hari&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <span id="hours" style="font-weight: bold; font-size: 30px;"></span> Jam&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <span id="minutes" style="font-weight: bold; font-size: 30px;"></span> Menit&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <span id="seconds" style="font-weight: bold; font-size: 30px;"></span> Detik
-                </div>
+                <div id="countdown" class="rounded-pill font-normal shadow-lg p-3 mb-5 bg-white rounded d-flex justify-content-between" style="color: black; border: 1px solid rgb(218, 218, 218);">
+                  <div class="d-inline-flex align-items-center">
+                      <span id="days" style="font-weight: bold; font-size: 25px;"></span> 
+                      <span style="font-size: 15px;">Hari</span>
+                  </div>
+                  <div class="d-inline-flex align-items-center">
+                      <span id="hours" style="font-weight: bold; font-size: 25px;"></span> 
+                      <span style="font-size: 15px;">Jam</span>
+                  </div>
+                  <div class="d-inline-flex align-items-center">
+                      <span id="minutes" style="font-weight: bold; font-size: 25px;"></span> 
+                      <span style="font-size: 15px;">Menit</span>
+                  </div>
+                  <div class="d-inline-flex align-items-center">
+                      <span id="seconds" style="font-weight: bold; font-size: 25px;"></span> 
+                      <span style="font-size: 15px;">Detik</span>
+                  </div>
+              </div>
+              
+              
                 <div>
                     <p class="font-normal">Dengan memohon rahmat dan ridho Allah Subhanahu Wa Ta'ala, insyaAllah kami akan menyelenggarakan acara :</p>
                 </div>
@@ -113,10 +129,12 @@
         <section id="galeri" class="galeri py-5">
           <div class="container text-center">
               <div class="card border-rounded" style="border-radius: 20px;">
-                  <h2 class="font-aesthetic" style="font-size: 36px; color: black; margin-top: 20px; margin-bottom: 20px;">Galeri</h2>
+                  <h2 class="font-aesthetic" style="font-size: 36px; color: black; margin-top: 20px; margin-bottom: 20px;"
+                  data-aos="fade-down" data-aos-duration="1500">Galeri</h2>
   
                   <!-- First Carousel -->
-                  <div id="carouselExampleIndicators1" class="carousel slide" data-ride="carousel" style="margin-bottom: 50px; border-radius: 25px; margin-left: 20px; margin-right: 20px;">
+                  <div id="carouselExampleIndicators1" class="carousel slide" data-ride="carousel" 
+                  style="margin-bottom: 50px; border-radius: 25px; margin-left: 20px; margin-right: 20px;" data-aos="fade-up" data-aos-duration="1500">
                       <ol class="carousel-indicators">
                           <li data-target="#carouselExampleIndicators1" data-slide-to="0" class="active"></li>
                           <li data-target="#carouselExampleIndicators1" data-slide-to="1"></li>
@@ -144,7 +162,8 @@
                   </div>
   
                   <!-- Second Carousel -->
-                  <div id="carouselExampleIndicators2" class="carousel slide" data-ride="carousel" style="margin-bottom: 50px; border-radius: 25px; margin-left: 20px; margin-right: 20px;">
+                  <div id="carouselExampleIndicators2" class="carousel slide" data-ride="carousel" 
+                  style="margin-bottom: 50px; border-radius: 25px; margin-left: 20px; margin-right: 20px;" data-aos="fade-up" data-aos-duration="1500">
                       <ol class="carousel-indicators">
                           <li data-target="#carouselExampleIndicators2" data-slide-to="0" class="active"></li>
                           <li data-target="#carouselExampleIndicators2" data-slide-to="1"></li>
@@ -180,19 +199,19 @@
           <div class="container text-center">
               <p class="font-aesthetic" style="font-size: 50px;">Love Gift</p>
               <p class="font-normal">Tanpa mengurangi rasa hormat, bagi anda yang ingin memberikan tanda kasih untuk kami, dapat melalui :</p>
-              <div class="row">
+              <div class="row" data-aos="fade-down" data-aos-duration="1500">
                   <div class="col">
-                      <div class="card">
+                      <div class="card" style="border-radius: 50px; box-shadow: rgba(0, 0, 0, 0.616);">
                           <img src="../assets/images/bca.jpg" alt="Gift Image 1" class="card-img">
-                          <p class="card-text font-normal">a.n Yoga</p>
+                          <p class="card-text font-normal" style="margin-bottom: -10px; margin-top: -10px;">a.n Yoga</p>
                           <p class="card-number font-normal">1234567890</p>
                           <button class="copy-btn" onclick="copyToClipboard('1234567890')">Salin No Rekening</button>
                       </div>
                   </div>
                   <div class="col">
-                      <div class="card">
+                      <div class="card" style="border-radius: 50px; box-shadow: rgba(0, 0, 0, 0.616);">
                           <img src="../assets/images/mandiri.jpg" alt="Gift Image 2" class="card-img">
-                          <p class="card-text font-normal">a.n Yoga</p>
+                          <p class="card-text font-normal" style="margin-bottom: -10px; margin-top: -10px;">a.n Yoga</p>
                           <p class="card-number font-normal">0987654321</p>
                           <button class="copy-btn" onclick="copyToClipboard('0987654321')">Salin No Rekening</button>
                       </div>
@@ -205,20 +224,23 @@
         <!-- Ucapan -->
         <section id="ucapan" class="ucapan py-5">
           <div class="container text-center">
-              <h2 class="font-aesthetic" style="font-size: 36px; color: black;">Ucapan</h2>
               <div class="row mt-4">
                   <div class="col-md-6 mx-auto">
-                      <div class="card p-4">
+                      <div class="card p-4" style="border-radius: 40px;">
+                        <h2 class="font-aesthetic" style="font-size: 36px; color: black; margin-bottom: 40px;">Ucapan & Doa</h2>
                           <form id="ucapanForm">
                               <div class="form-group">
-                                  <label for="nama">Nama</label>
-                                  <input type="text" class="form-control" id="nama" required>
+                                  <label class="font-normal" for="nama" style="text-align: left;">Nama</label>
+                                  <input type="text" class="form-control font-normal" id="nama" placeholder="Nama..." required>
+                                
                               </div>
                               <div class="form-group">
-                                  <label for="ucapan">Ucapan</label>
-                                  <textarea class="form-control" id="ucapan" rows="3" required></textarea>
+                                  <label class="font-normal" for="ucapan">Ucapan</label>
+                                  <textarea class="form-control font-normal" id="ucapan" rows="3" placeholder="Tulis Ucapan & Doa" required></textarea>
                               </div>
-                              <button type="submit" class="btn btn-primary">Kirim</button>
+                              <button type="submit" class="btn btn-primary rounded-pill" style="background-color: #0066ff; color: white;">
+                                <i class="fa solid fa-paper-plane" style="margin-right: 10px;"></i>
+                                Send</button>
                           </form>
                       </div>
                   </div>
@@ -228,6 +250,29 @@
               </div>
           </div>
       </section>
+      <div data-aos="fade-up" data-aos-duration="1500">
+      <p class="font-normal" style="text-align: center;">Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila, Bapak / Ibu / Saudara / i. berkenan hadir untuk memberikan do'a restunya kami ucapkan terimakasih.</p>
+      <p class="font-aesthetic" style="text-align: center; font-size: 40px;">Wassalamualaikum Warahmatullahi Wabarakatuh</p>
+      <h2 style="text-align: center; margin-bottom: 100px;">اَلْحَمْدُ لِلّٰهِ رَبِّ الْعٰلَمِيْنَۙ</h2>
+      </div>
+    </div>
+    <div class="bottom-nav">
+      <a href="#undangan" class="font-normal" style="font-size: 14px;"><i class="fa fa-envelope"></i><br>Undangan</a>
+      <a href="#mempelai" class="font-normal" style="font-size: 14px;"><i class="fa fa-heart"></i><br>Mempelai</a>
+      <a href="#tanggal" class="font-normal" style="font-size: 14px;"><i class="fa fa-calendar-check"></i><br>Tanggal</a>
+      <a href="#galeri" class="font-normal" style="font-size: 14px;"><i class="fa fa-images"></i><br>Galeri</a>
+      <a href="#ucapan" class="font-normal" style="font-size: 14px;"><i class="fa fa-comment"></i><br>Ucapan</a>
+   </div>
+
+    <!-- Music Player -->
+      <audio id="bgMusic" autoplay loop>
+        <source src="../assets/musik/Wedding Day.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <!-- Play Music Button -->
+    <div id="playMusicBtn" >
+        <i id="musicIcon" class="fa-solid fa-circle-pause"></i>
     </div>
     <!--END CONTENT-->
 
