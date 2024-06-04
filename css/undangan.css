@@ -1,0 +1,65 @@
+/*CSS UNTUK MENYEMBUNYIKAN GULIR BILAH*/
+::-webkit-scrollbar {
+    display: none; /* Menyembunyikan bilah gulir */
+}
+
+.font-normal {
+    font-family: 'Josefin Sans', sans-serif !important;
+}
+
+.font-aesthetic {
+    font-family: 'Sacramento', cursive !important;
+}
+
+.font-arabic {
+    font-family: 'Noto Naskh Arabic', serif !important;
+}
+
+body, html {
+    min-height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    font-family: Arial, sans-serif;
+}
+
+
+#undangan {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: auto;
+    height: 100vh;
+}
+
+.avatar img {
+    border-radius: 50%;
+    width: 225px; /* Sesuaikan dengan ukuran yang diinginkan */
+    height: 225px; /* Sesuaikan dengan ukuran yang diinginkan */
+    border: 5px solid white; /* Menambahkan border hitam dengan ketebalan 5px */
+    align-items: center;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+.rounded-pill {
+    border-radius: 50px; /* Membuat sudut tombol menjadi bulat */
+    padding: 10px 20px; /* Menambahkan padding pada tombol */
+    border: none; /* Menghilangkan border default tombol */
+    background-color: white; /* Mengatur warna latar belakang tombol */
+    color: black; /* Mengatur warna teks tombol */
+    font-size: 16px; /* Mengatur ukuran font tombol */
+    cursor: pointer; /* Mengubah kursor menjadi pointer saat diarahkan ke tombol */
+    transition: background-color 0.3s, transform 0.3s; /* Menambahkan efek transisi pada latar belakang dan transformasi */
+}
+
+.rounded-pill:hover {
+    background-color: #d1d1d1; /* Mengubah warna latar belakang saat tombol di-hover */
+    transform: scale(1.05); /* Memperbesar tombol sedikit saat di-hover */
+}
+
+.card {
+    box-shadow: 0px 0px 10px 0px rgba(0,0,1,1.5);
+}

@@ -13,5 +13,6 @@ const interval = setInterval(() => {
         loader.style.display = 'none';
         content.style.display = 'block';
     }
-}, 25); // Ubah durasi sesuai kebutuhan
+}, 25);
 /* END SCRIPT LOADING PROGRESS BAR */
+
