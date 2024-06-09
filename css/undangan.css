@@ -1,8 +1,7 @@
-/*CSS UNTUK MENYEMBUNYIKAN GULIR BILAH*/
+/* CSS UNTUK MENYEMBUNYIKAN GULIR BILAH */
 ::-webkit-scrollbar {
     display: none; /* Menyembunyikan bilah gulir */
 }
-
 
 .font-normal {
     font-family: 'Josefin Sans', sans-serif !important;
@@ -20,13 +19,15 @@ body, html {
     scroll-behavior: smooth;
     min-height: 100%;
     margin: 0;
+    padding: 0;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     background-color: #fff;
     font-family: Arial, sans-serif;
+    overflow-x: hidden; /* Menghilangkan scrollbar horizontal */
 }
-
 
 #undangan {
     display: flex;
@@ -34,14 +35,16 @@ body, html {
     flex-direction: column;
     align-items: center;
     overflow-y: auto;
+    width: 100%;
     height: 100vh;
+    max-width: 100%; /* Menjaga elemen dalam batas layar */
 }
 
 .avatar img {
     border-radius: 50%;
     width: 225px; /* Sesuaikan dengan ukuran yang diinginkan */
     height: 225px; /* Sesuaikan dengan ukuran yang diinginkan */
-    border: 5px solid white; /* Menambahkan border hitam dengan ketebalan 5px */
+    border: 5px solid white; /* Menambahkan border putih dengan ketebalan 5px */
     align-items: center;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
 }
@@ -64,10 +67,10 @@ body, html {
 
 .card {
     box-shadow: 0px 0px 10px 0px rgba(0,0,1,1.5);
+    max-width: 100%; /* Menjaga elemen dalam batas layar */
 }
 
-/* CSS LOVE GIFT*/
-
+/* CSS LOVE GIFT */
 .love-gift .card {
     background-color: #fff;
     border: 1px solid #ddd;
@@ -79,10 +82,10 @@ body, html {
 }
 
 .love-gift .card-img {
-    max-width: 250px; /* Adjusted size */
+    max-width: 100%; /* Menjaga elemen dalam batas layar */
     height: auto;
     border-radius: 5px;
-    margin-bottom: 10px; /* Added margin bottom */
+    margin-bottom: 10px; /* Menambahkan margin bawah */
     align-items: center;
     text-align: center;
 }
@@ -98,25 +101,53 @@ body, html {
 }
 
 .love-gift .copy-btn {
-    padding: 5px 10px; /* Adjusted padding */
-    font-size: 0.9em; /* Adjusted font size */
+    padding: 5px 10px; /* Menyesuaikan padding */
+    font-size: 0.9em; /* Menyesuaikan ukuran font */
     color: #fff;
     background-color: #0066ff;
     border: none;
-    border-radius: 20px; /* Rounded pill shape */
+    border-radius: 20px; /* Membulatkan sudut */
     cursor: pointer;
-
 }
 
 .love-gift .copy-btn:hover {
     background-color: #0066ffbb;
 }
 
-.row {
+/* Ensure the container is centered */
+.love-gift .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+}
+
+/* Ensure the row and columns are centered */
+.love-gift .row {
     display: flex;
     justify-content: center;
+    align-items: center;
+    width: 100%;
     flex-wrap: wrap;
 }
+
+.love-gift .col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 10px; /* Optional: to add some space between columns */
+}
+
+.love-gift .card {
+    border-radius: 50px; 
+    box-shadow: rgba(0, 0, 0, 0.616); 
+    padding: 20px;
+    text-align: center;
+}
+
 
 .col {
     flex: 1;
@@ -124,8 +155,7 @@ body, html {
     margin: 10px;
 }
 
-/* CSS BOTTOM NAVIGATION*/
-
+/* CSS BOTTOM NAVIGATION */
 .bottom-nav {
     position: fixed;
     bottom: 0;
@@ -134,29 +164,39 @@ body, html {
     z-index: 1000;
     display: flex;
     justify-content: space-around;
-    
+    box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.1);
 }
+
 .bottom-nav a {
     flex-grow: 1;
     text-align: center;
     padding: 10px 0;
     color: rgb(94, 94, 94);
     text-decoration: none;
+    font-size: 14px;
 }
+
 .bottom-nav a:hover {
     color: #222222;
 }
 
+/* Media query for smaller screens */
+@media (max-width: 480px) {
+    .bottom-nav a {
+        padding: 8px 0;
+        font-size: 12px; /* Menyesuaikan ukuran font untuk layar kecil */
+    }
+}
 
- /* CSS for Play Music Button */
- #playMusicBtn {
+/* CSS for Play Music Button */
+#playMusicBtn {
     position: fixed;
-    bottom: 60px; /* Adjust as needed */
-    right: 20px; /* Adjust as needed */
+    bottom: 80px; /* Menyesuaikan jika diperlukan */
+    right: 20px; /* Menyesuaikan jika diperlukan */
     z-index: 9999;
     background-color: rgba(255, 255, 255, 0.8);
-    width: 30px; /* Adjust as needed */
-    height: 30px; /* Adjust as needed */
+    width: 30px; /* Menyesuaikan jika diperlukan */
+    height: 30px; /* Menyesuaikan jika diperlukan */
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -179,4 +219,66 @@ body, html {
     animation: rotate 2s linear infinite;
 }
 
-/* MOUSE SCROLL*/
+/* MOUSE SCROLL */
+
+
+/*MEMPELAI */
+
+.mempelai {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+}
+
+.mempelai .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.mempelai .row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.mempelai .col-md-12 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+/* Ensure the container is centered */
+.tanggal .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+}
+
+/* Ensure the row and columns are centered */
+.tanggal .row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.tanggal .col-md-6 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
