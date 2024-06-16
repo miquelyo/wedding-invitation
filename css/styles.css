@@ -17,26 +17,12 @@
 
 body, html {
     height: 100%;
-    width: 100%;
     margin: 0;
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: #000;
     font-family: Arial, sans-serif;
-}
-.home {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    width: 100%;
-    background-image: url('../assets/images/7.JPG');
-    background-size: cover; /* membuat gambar menutupi seluruh latar belakang */
-    background-position: center; /* menempatkan gambar di tengah */
-    background-repeat: no-repeat; /* menghindari pengulangan gambar */
-    padding: 50px; /* memberi ruang di sekitar konten agar tidak terlalu menempel dengan tepi */
-    text-align: center; /* membuat teks berada di tengah */
-    color: white; /* warna teks menjadi putih */
 }
 #loader {
     display: flex;
@@ -69,8 +55,8 @@ body, html {
 
 .avatar img {
     border-radius: 50%;
-    width: 175px; /* Sesuaikan dengan ukuran yang diinginkan */
-    height: 175px; /* Sesuaikan dengan ukuran yang diinginkan */
+    width: 225px; /* Sesuaikan dengan ukuran yang diinginkan */
+    height: 225px; /* Sesuaikan dengan ukuran yang diinginkan */
     border: 3px solid white; /* Menambahkan border hitam dengan ketebalan 5px */
 }
 
